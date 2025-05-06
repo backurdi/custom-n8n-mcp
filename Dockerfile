@@ -4,8 +4,15 @@ FROM n8nio/n8n:latest
 USER root
 # Install necessary system packages
 RUN apk add --no-cache \
-curl \ git \ build-base \ chromium \ bash \ tar \ xZ \
-util linux \ coreutils
+    curl \
+    git \
+    build-base \
+    chromium \
+    bash \
+    tar \
+    xz \
+    util-linux \
+    coreutils
 # Install Astral uv/uvx and make available system-wid
 RUN curl -Ls https://astral.sh/uv/install.sh | bash \
 && chmod +x /root/.local/bin/uv \
